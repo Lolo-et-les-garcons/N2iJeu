@@ -59,4 +59,44 @@ class ApiController {
         return;
     }
 
+    public function saveItem() {
+        $name = $_POST['name'];
+        $type = $_POST['type'];
+        $quantity = $_POST['quantity'];
+        $idHidden = $_POST['idHidden'];
+
+        if($idHidden == null){
+            $reqCreate = $this->pdo->prepare('INSERT INTO storage(name, quantity, typeRef) VALUES (:name, :quantity, :typeRef)');
+            $reqCreate->execute(array(
+                "name" => $name,
+                "typeRef" => $type,
+                "quantity" => $quantity,
+            ));
+            echo "success";
+            return;
+        }
+        else{
+            $reqUpd = $this->pdo->prepare('UPDATE storage SET name=:name, quantity=:quantity, typeRef=:typeRef WHERE id=:id');
+            $reqUpd->execute(array(
+                "name" => $name,
+                "typeRef" => $type,
+                "quantity" => $quantity,
+                "id" => $idHidden
+            ));
+            echo "success";
+            return;
+        }
+    }
+
+    public function deleteItem() {
+        $id=$_POST['idItem'];
+        echo $id;
+        $reqDelete = $this->pdo->prepare('DELETE FROM storage WHERE id=:id');
+        $reqDelete->execute(array(
+           "id" => $id
+        ));
+        echo "success";
+        return;
+    }
+
 }

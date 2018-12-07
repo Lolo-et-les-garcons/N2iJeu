@@ -11,7 +11,7 @@ class AboutController{
     }
 
     public function getView(){
-        $page = $templateProjEtude = file_get_contents("view/game.html");
+        $page = file_get_contents("view/about.html");
         return $page;
     }
 

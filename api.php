@@ -22,6 +22,12 @@ switch ($action){
     case "saveScore" :
         $apiController->saveScore();
     break;
+    case "saveItem" :
+        $apiController->saveItem();
+        break;
+    case "deleteItem" :
+        $apiController->deleteItem();
+        break;
     default :
         echo "error_action";
         return;
