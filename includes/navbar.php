@@ -8,7 +8,7 @@
 ?>
 
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper amber darken-4">
         <a href="#!" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">

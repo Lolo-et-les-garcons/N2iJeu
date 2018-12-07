@@ -19,7 +19,7 @@ $controllerTab = array(
 if(isset($_GET["redirect"])){
     //todo redirect
 }
-if(isset($_GET["page"])){
+if(!isset($_GET["page"])){
     $controller = $controllerTab["Game"];
 }
 else{

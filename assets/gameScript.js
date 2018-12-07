@@ -4,7 +4,7 @@ function initGame(){
 
     (function() {
 
-        const BASENAME = 'FloorIt! - HTML';
+        const BASENAME = 'FloorIt';
         const DEBUG_ENABLED = false;
         const INDETERMINATE_STATUS_STEP_MS = 100;
 
